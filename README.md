@@ -77,19 +77,19 @@ void backgroundcolor(int color);
 
 *[Veja a estrutura COLORS](#definição-de-colors)*
 
-## Como usar
+## Como usar a biblioteca
 
-### Colocar a biblioteca na pasta do projeto
+1. coloque o arquivo `console.h` na pasta do projeto.
+2. faça a inclusão da biblioteca `console.h` no projeto:
 
-| ![Demonstração do arquivo console.h na pasta do projeto](https://user-images.githubusercontent.com/65545355/97735820-9a019900-1ab9-11eb-8e29-f5e9edd03214.png "Demonstração do arquivo console.h na pasta do projeto") |
-|-|
-| *Demonstração do arquivo console.h na pasta do projeto* |
+```c
+//Incluindo a biblioteca
+#include "console.h"
 
-### Fazer a inclusão da biblioteca no projeto
-
-| ![Demonstração da inclusão do arquivo console.h no projeto](https://user-images.githubusercontent.com/65545355/97736130-febcf380-1ab9-11eb-9529-5f2ef3024411.png "Demonstração da inclusão do arquivo console.h no projeto") |
-|-|
-| *Demonstração da inclusão do arquivo console.h no projeto* |
+int main(){
+  return 0;
+}
+```
 
 **Feito isso, as funções estão prontas para uso.**
 
@@ -172,20 +172,21 @@ A fim de evitar inclusões duplicadas, foram adicionadas as seguintes condiçõe
 
 ## Usando a textcolor e backgroundcolor
 
-| ![Exemplo de código usando as funções textcolor() e backgroundcolor()](https://user-images.githubusercontent.com/65545355/97738988-ed75e600-1abd-11eb-84e3-4d1b0c618524.png "Exemplo de código usando as funções textcolor() e backgroundcolor()") |
+| <img src="https://user-images.githubusercontent.com/65545355/97738988-ed75e600-1abd-11eb-84e3-4d1b0c618524.png" width="500" title="Exemplo de código usando as funções textcolor() e backgroundcolor()" alt="Exemplo de código usando as funções textcolor() e backgroundcolor()"> |
 |-|
 | *Exemplo de código usando as funções textcolor() e backgroundcolor()* |
 
-| ![A saída será com as cores que foram informadas](https://user-images.githubusercontent.com/65545355/97739518-b3591400-1abe-11eb-8621-323361e11be1.png "A saída será com as cores que foram informadas") |
+
+| <img src="https://user-images.githubusercontent.com/65545355/97739518-b3591400-1abe-11eb-8621-323361e11be1.png" width="500" title="A saída será com as cores que foram informadas" alt="A saída será com as cores que foram informadas"> |
 |-|
 | *A saída será com as cores que foram informadas* |
 
 ## Usando a gotoxy
 
-| ![Exemplo de código usando a função gotoxy()](https://user-images.githubusercontent.com/65545355/97739874-34181000-1abf-11eb-91f9-342bf7fd6260.png "Exemplo de código usando a função gotoxy()") |
+| <img src="https://user-images.githubusercontent.com/65545355/97739874-34181000-1abf-11eb-91f9-342bf7fd6260.png" width="500" title="Exemplo de código usando a função gotoxy()" alt="Exemplo de código usando a função gotoxy()"> |
 |-|
 | *Exemplo de código usando a função gotoxy()* |
 
-| ![A saída será nas posições que foram informadas](https://user-images.githubusercontent.com/65545355/97740012-5f9afa80-1abf-11eb-99ca-4056f58aa414.png "A saída será nas posições que foram informadas") |
+| <img src="https://user-images.githubusercontent.com/65545355/97740012-5f9afa80-1abf-11eb-99ca-4056f58aa414.png" width="500" title="A saída será nas posições que foram informadas" alt="A saída será nas posições que foram informadas"> |
 |-|
 | *A saída será nas posições que foram informadas* |
