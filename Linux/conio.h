@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/ioctl.h>
+#include <termios.h>
+#include <stdbool.h>
 
 #ifdef  _WIN32
   #include <conio.h>
@@ -19,6 +22,7 @@ void reset_video();
 void showcursor();
 void textcolor(char *color);
 void textbackground(char color[11]);
+bool kbhit();
 
 // conio.h for ANSI C and C++
 // Extra functions are also provided.
@@ -135,6 +139,23 @@ void textbackground(char color[11])
   strcpy(col, color);
   col[2] = '4'; // The given color will be fg color. Replace ‘3’ with ‘4’.
   printf("%s", col);
+}
+
+bool kbhit()
+{
+    struct termios term;
+    tcgetattr(0, &term);
+
+    struct termios term2 = term;
+    term2.c_lflag &= ~ICANON;
+    tcsetattr(0, TCSANOW, &term2);
+
+    int byteswaiting;
+    ioctl(0, FIONREAD, &byteswaiting);
+
+    tcsetattr(0, TCSANOW, &term);
+
+    return byteswaiting > 0;
 }
 
 #endif
