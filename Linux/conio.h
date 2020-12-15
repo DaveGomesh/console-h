@@ -1,6 +1,13 @@
 #ifndef __CONIO_H__
 #define __CONIO_H__
 
+/**
+ * @author: desconhecido
+ * @Melhorias: David Gomesh e Daniel Rocha
+ * 
+ * Documentação: https://github.com/DavidGomesh/console-h
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
